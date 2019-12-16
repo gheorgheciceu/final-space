@@ -1,0 +1,9 @@
+com\sa\to\CrewTOLight.class
+com\sa\to\PlanetTO.class
+com\sa\entity\IdentifiableEntity.class
+com\sa\enums\PlanetStatus.class
+com\sa\to\CaptainTO.class
+com\sa\to\RobotTO.class
+com\sa\to\SolarSystemTO.class
+com\sa\to\CrewTO.class
+com\sa\to\IdentifiableTO.class

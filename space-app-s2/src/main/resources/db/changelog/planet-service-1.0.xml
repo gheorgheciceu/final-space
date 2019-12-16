@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create solarSystems table" author="gh.ciceu">
+        <createTable tableName="solarSystems">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create planets table" author="gh.ciceu">
+        <createTable tableName="planets">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="visitedBy" type="INT"/>
+            <column name="status" type="VARCHAR(20)" defaultValue="TODO">
+                <constraints nullable="false"/>
+            </column>
+            <column name="solarSystemId" type="INT">
+                <constraints foreignKeyName="fk_solarSystem_planet_id" referencedTableName="solarSystems" referencedColumnNames="id"/>
+            </column>
+            <column name="description" type="VARCHAR(1000)"/>
+            <column name="image" type="BLOB"/>
+
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

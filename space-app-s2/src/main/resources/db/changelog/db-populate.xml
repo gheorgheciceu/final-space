@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="Prepopulate DB with solar systems" author="gh.ciceu">
+        <insert tableName="solarSystems">
+            <column name="name">Solar system C137</column>
+        </insert>
+        <insert tableName="solarSystems">
+            <column name="name">World</column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="Prepopulate DB with planets" author="gh.ciceu">
+        <insert tableName="planets">
+            <column name="description">to be investigated</column>
+            <column name="name">Mars</column>
+            <column name="solarSystemId">1</column>
+        </insert>
+        <insert tableName="planets">
+            <column name="description">to be investigated</column>
+            <column name="name">Terra</column>
+            <column name="solarSystemId">1</column>
+        </insert>
+        <insert tableName="planets">
+            <column name="description">to be investigated</column>
+            <column name="name">Orion</column>
+            <column name="solarSystemId">2</column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

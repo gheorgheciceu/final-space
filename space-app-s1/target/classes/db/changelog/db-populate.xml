@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="Prepopulate DB with crews" author="gh.ciceu">
+        <insert tableName="crews">
+            <column name="shuttleName">Crew_1</column>
+        </insert>
+        <insert tableName="crews">
+            <column name="shuttleName">Crew_2</column>
+        </insert>
+        <insert tableName="crews">
+            <column name="shuttleName">Crew_3</column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="Prepopulate DB with captains" author="gh.ciceu">
+        <insert tableName="captains">
+            <column name="firstName">Captain</column>
+            <column name="lastName">Hook</column>
+            <column name="crewId">1</column>
+        </insert>
+        <insert tableName="captains">
+            <column name="firstName">Captain</column>
+            <column name="lastName">America</column>
+            <column name="crewId">2</column>
+        </insert>
+        <insert tableName="captains">
+            <column name="firstName">Yuri</column>
+            <column name="lastName">Gagarin</column>
+            <column name="crewId">3</column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="Prepopulate DB with robots" author="gh.ciceu">
+        <insert tableName="robots">
+            <column name="name">R2D2</column>
+            <column name="crewId">1</column>
+        </insert>
+        <insert tableName="robots">
+            <column name="name">KVN</column>
+            <column name="crewId">2</column>
+        </insert>
+        <insert tableName="robots">
+            <column name="name">Robo Cop</column>
+            <column name="crewId">3</column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
