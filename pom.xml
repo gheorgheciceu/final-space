@@ -20,7 +20,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <data-model.version>1.0-SNAPSHOT</data-model.version>
         <modelmapper.version>2.3.2</modelmapper.version>
-        <swagger.version>2.9.2</swagger.version>
+        <swagger.version>2.10.0</swagger.version>
        <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
     </properties>
 
